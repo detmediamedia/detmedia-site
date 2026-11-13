@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Det Media</title>
 <meta name="description" content="Det Media: engajamento orgânico com assinatura de luxo. Estratégia, vídeo, social media e agentes de IA no WhatsApp.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,8 +40,14 @@ h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.05;text-wrap:b
 /* Cabeçalho */
 header{border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px}
-.mark{font-family:var(--display);font-size:28px;font-weight:600;text-decoration:none;letter-spacing:.01em}
-.mark i{font-style:normal;color:var(--champagne)}
+.mark{display:inline-flex;align-items:center;gap:14px;text-decoration:none}
+.mono{width:46px;height:46px;flex:none}
+.lock{display:flex;flex-direction:column;gap:5px}
+.lock b{font-family:var(--display);font-weight:500;font-size:32px;line-height:.9;letter-spacing:.08em}
+.lock span{display:flex;align-items:center;gap:8px;font-size:9px;font-weight:400;letter-spacing:.5em;text-transform:uppercase}
+.lock span i{width:22px;height:1px;background:var(--champagne)}
+footer .mono{width:28px;height:28px}
+footer .wrap>span:first-child{display:inline-flex;align-items:center;gap:12px}
 nav{display:flex;gap:clamp(14px,3vw,34px);flex-wrap:wrap}
 nav a{font-size:14px;text-decoration:none;color:var(--marfim-dim);padding:4px 0;border-bottom:1px solid transparent}
 nav a:hover{color:var(--marfim);border-bottom-color:var(--champagne)}
@@ -126,7 +133,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <header>
   <div class="wrap bar">
-    <a class="mark" href="#topo" aria-label="Det Media, início">Det Media<i>.</i></a>
+    <a class="mark" href="#topo" aria-label="Det Media, início"><svg class="mono" viewBox="0 0 100 100" aria-hidden="true"><rect x="8" y="18" width="20" height="6" fill="#F3EFE6"/><rect x="22" y="18" width="6" height="64" fill="#F3EFE6"/><path d="M28 21 H50 A29 29 0 0 1 50 79 H28" fill="none" stroke="#F3EFE6" stroke-width="6"/><circle cx="56" cy="50" r="5" fill="#C9A96E"/></svg><span class="lock"><b>DET</b><span><i></i>Media</span></span></a>
     <nav aria-label="Seções">
       <a href="#servicos">Serviços</a>
       <a href="#trabalhos">Trabalhos</a>
@@ -268,7 +275,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Det Media · Diaz &amp; Thiago</span>
+    <span><svg class="mono" viewBox="0 0 100 100" aria-hidden="true"><rect x="8" y="18" width="20" height="6" fill="#F3EFE6"/><rect x="22" y="18" width="6" height="64" fill="#F3EFE6"/><path d="M28 21 H50 A29 29 0 0 1 50 79 H28" fill="none" stroke="#F3EFE6" stroke-width="6"/><circle cx="56" cy="50" r="5" fill="#C9A96E"/></svg>© 2026 Det Media · Diaz &amp; Thiago</span>
     <span>Engajamento orgânico com assinatura de luxo.</span>
   </div>
 </footer>
