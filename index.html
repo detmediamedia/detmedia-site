@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Det Media</title>
+<meta name="description" content="Det Media: engajamento orgânico com assinatura de luxo. Estratégia, vídeo, social media e agentes de IA no WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Brand kit Det Media, Edição 01 · 2026. Tema único (noir), por escolha de marca.
+     Layout: coluna larga alinhada à esquerda, linhas finas champagne como divisores, sem cartões repetidos. */
+  --noir:#0B0B0D;
+  --noir-2:#141416;
+  --line:#2A2824;
+  --champagne:#C9A96E;
+  --marfim:#F3EFE6;
+  --marfim-dim:#A9A398;
+  --display:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:clamp(20px,5vw,72px);
+  --max:1180px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--noir);color:var(--marfim);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--champagne);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.05;text-wrap:balance;letter-spacing:-.005em}
+.label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--champagne);font-weight:600}
+.dim{color:var(--marfim-dim)}
+
+/* Cabeçalho */
+header{border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px}
+.mark{font-family:var(--display);font-size:28px;font-weight:600;text-decoration:none;letter-spacing:.01em}
+.mark i{font-style:normal;color:var(--champagne)}
+nav{display:flex;gap:clamp(14px,3vw,34px);flex-wrap:wrap}
+nav a{font-size:14px;text-decoration:none;color:var(--marfim-dim);padding:4px 0;border-bottom:1px solid transparent}
+nav a:hover{color:var(--marfim);border-bottom-color:var(--champagne)}
+
+/* Abertura */
+.hero{padding-top:clamp(56px,10vw,128px);padding-bottom:clamp(48px,8vw,96px)}
+.hero h1{font-size:clamp(46px,9vw,112px);max-width:11ch;margin-top:22px}
+.hero h1 em{font-style:italic;color:var(--champagne)}
+.hero p{max-width:54ch;margin-top:28px;font-size:clamp(16px,1.6vw,19px);color:var(--marfim-dim)}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;font:600 14px/1 var(--body);letter-spacing:.04em;text-decoration:none;border:1px solid var(--champagne);border-radius:2px;cursor:pointer;transition:background .2s,color .2s}
+.btn.solid{background:var(--champagne);color:var(--noir)}
+.btn.solid:hover{background:var(--marfim);border-color:var(--marfim)}
+.btn.ghost{background:transparent;color:var(--marfim)}
+.btn.ghost:hover{background:var(--champagne);color:var(--noir)}
+
+section{border-top:1px solid var(--line);padding:clamp(56px,8vw,104px) 0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;margin-bottom:clamp(32px,5vw,56px)}
+.head h2{font-size:clamp(34px,5vw,60px)}
+@media (max-width:760px){.head{grid-template-columns:1fr}}
+
+/* Tese */
+.tese{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px 64px;align-items:end}
+.tese blockquote{font-family:var(--display);font-size:clamp(30px,4.4vw,54px);line-height:1.1;text-wrap:balance}
+.tese blockquote span{color:var(--champagne);font-style:italic}
+.tese p{color:var(--marfim-dim);max-width:44ch}
+@media (max-width:760px){.tese{grid-template-columns:1fr}}
+
+/* Serviços */
+.servicos{list-style:none;padding:0}
+.servicos li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:8px 48px;padding:26px 0;border-top:1px solid var(--line)}
+.servicos li:last-child{border-bottom:1px solid var(--line)}
+.servicos h3{font-size:clamp(24px,2.8vw,32px)}
+.servicos p{color:var(--marfim-dim);max-width:60ch}
+@media (max-width:760px){.servicos li{grid-template-columns:1fr}}
+
+/* Trabalho */
+.case{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:32px clamp(32px,6vw,88px);align-items:center}
+.case video{width:100%;aspect-ratio:9/16;display:block;background:var(--noir-2);border:1px solid var(--line);border-radius:4px;object-fit:cover}
+.case h3{font-size:clamp(34px,4.6vw,56px);margin:14px 0 18px}
+.case p{color:var(--marfim-dim);max-width:52ch}
+.feito{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;list-style:none;padding:0}
+.feito li{border:1px solid var(--champagne);color:var(--champagne);padding:7px 16px;font-size:13px;font-weight:600;letter-spacing:.06em;border-radius:999px}
+@media (max-width:760px){.case{grid-template-columns:1fr}.case video{max-width:340px}}
+
+/* Agente de IA */
+.agente{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:40px clamp(32px,6vw,88px);align-items:start}
+@media (max-width:860px){.agente{grid-template-columns:1fr}}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{background:transparent;color:var(--marfim-dim);border:1px solid var(--line);padding:9px 16px;font:600 13px/1 var(--body);border-radius:999px;cursor:pointer}
+.tab:hover{color:var(--marfim);border-color:var(--marfim-dim)}
+.tab[aria-selected="true"]{background:var(--champagne);border-color:var(--champagne);color:var(--noir)}
+.chat{background:var(--noir-2);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.chat-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.avatar{width:36px;height:36px;border-radius:50%;border:1px solid var(--champagne);display:grid;place-items:center;font-family:var(--display);font-size:20px;color:var(--champagne);flex:none}
+.chat-top strong{display:block;font-size:14px;line-height:1.3}
+.chat-top small{font-size:12px;color:var(--marfim-dim)}
+.msgs{display:flex;flex-direction:column;gap:10px;padding:18px;min-height:380px}
+.msgs[hidden]{display:none}
+.m{max-width:84%;padding:10px 14px;font-size:14px;line-height:1.45;border-radius:14px}
+.m time{display:block;font-size:11px;margin-top:4px;opacity:.6;font-variant-numeric:tabular-nums}
+.m.in{align-self:flex-start;background:#1E1D1B;border:1px solid var(--line);border-bottom-left-radius:4px}
+.m.out{align-self:flex-end;background:var(--champagne);color:var(--noir);border-bottom-right-radius:4px}
+.m.sys{align-self:center;background:transparent;border:1px dashed var(--line);color:var(--marfim-dim);font-size:12px;border-radius:999px;padding:6px 14px;text-align:center}
+.nota{font-size:12px;color:var(--marfim-dim);margin-top:12px}
+.faz{list-style:none;padding:0}
+.faz li{padding:22px 0;border-top:1px solid var(--line)}
+.faz li:last-child{border-bottom:1px solid var(--line)}
+.faz h3{font-size:26px;margin-bottom:6px}
+.faz p{color:var(--marfim-dim);max-width:52ch}
+
+/* Contato */
+.contato h2{font-size:clamp(40px,7vw,92px);max-width:14ch}
+.contato h2 em{font-style:italic;color:var(--champagne)}
+.contato p{color:var(--marfim-dim);margin-top:22px;max-width:50ch}
+.canais{display:flex;gap:16px 40px;flex-wrap:wrap;margin-top:30px;font-size:14px;color:var(--marfim-dim)}
+.canais b{color:var(--marfim);font-weight:600}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--marfim-dim)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#topo" aria-label="Det Media, início">Det Media<i>.</i></a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#agente-ia">Agente de IA</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="wrap hero">
+    <p class="label">Agência de marketing · Diaz &amp; Thiago</p>
+    <h1>Engajamento orgânico com <em>assinatura de luxo.</em></h1>
+    <p>A Det Media faz marcas crescerem pelo conteúdo: estratégia, captação, edição e gestão das redes. E coloca um agente de IA no WhatsApp para responder seus clientes na hora.</p>
+    <div class="actions">
+      <a class="btn solid" href="#trabalhos">Ver trabalhos</a>
+      <a class="btn ghost" href="#contato">Falar com a Det</a>
+    </div>
+  </div>
+
+  <section aria-label="Nossa tese">
+    <div class="wrap tese">
+      <blockquote>Crescer no orgânico não garante vendas. Garante <span>autoridade, contatos</span> e uma marca que as pessoas procuram.</blockquote>
+      <p>Por isso separamos as duas coisas. O conteúdo constrói a presença. Quando você quer um canal de vendas, entramos com tráfego pago em cima de um perfil que já convence.</p>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Serviços</p>
+        <h2>O que a Det faz pela sua marca</h2>
+      </div>
+      <ul class="servicos">
+        <li><h3>Social media</h3><p>Gestão das suas redes com apoio de IA: planejamento, publicação e acompanhamento do que está crescendo e do que não está.</p></li>
+        <li><h3>Vídeo e foto</h3><p>Captação e edição profissional para Reels e anúncios, pensadas a partir da estratégia e não só da estética.</p></li>
+        <li><h3>Conteúdo em duas frentes</h3><p>Posts de topo de funil para fazer a página crescer e posts de fundo de funil, que alcançam menos gente e convertem mais.</p></li>
+        <li><h3>Tráfego pago</h3><p>Para quem quer transformar o perfil em canal de vendas, com anúncios apoiados no conteúdo que já funciona.</p></li>
+        <li><h3>Agentes de IA</h3><p>Um atendente no WhatsApp que conhece o seu negócio, responde na hora e passa a conversa para uma pessoa quando precisa.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="trabalhos">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Trabalhos</p>
+        <h2>Feito pela Det</h2>
+      </div>
+      <div class="case">
+        <video controls playsinline preload="metadata" poster="global-stay.jpg" aria-label="Vídeo: tour de apartamento da Global Stay">
+          <source src="global-stay.mp4" type="video/mp4">
+        </video>
+        <div>
+          <p class="label">Hospedagem por temporada</p>
+          <h3>Global Stay</h3>
+          <p>Tour de apartamento em vídeo vertical, com apresentador e legenda, para mostrar a experiência da hospedagem em 30 segundos.</p>
+          <ul class="feito" aria-label="O que fizemos">
+            <li>Estratégia</li>
+            <li>Captação</li>
+            <li>Edição</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="agente-ia">
+    <div class="wrap">
+      <div class="head">
+        <p class="label">Agente de IA no WhatsApp</p>
+        <h2>Seu cliente escreve. O atendimento já começou.</h2>
+      </div>
+      <div class="agente">
+        <div>
+          <div class="tabs" role="tablist" aria-label="Exemplos de conversa">
+            <button class="tab" role="tab" id="t-checkin" aria-controls="c-checkin" aria-selected="true">Hospedagem: check-in</button>
+            <button class="tab" role="tab" id="t-problema" aria-controls="c-problema" aria-selected="false">Hospedagem: problema</button>
+            <button class="tab" role="tab" id="t-clinica" aria-controls="c-clinica" aria-selected="false">Clínica: agendamento</button>
+          </div>
+          <div class="chat">
+            <div class="chat-top">
+              <div class="avatar" aria-hidden="true">D</div>
+              <div><strong>Atendente virtual</strong><small>responde em segundos, a qualquer hora</small></div>
+            </div>
+
+            <div class="msgs" role="tabpanel" id="c-checkin" aria-labelledby="t-checkin">
+              <div class="m out">Bom dia, Marina! Seu check-in é hoje, a partir das 15h. Quer que eu envie o passo a passo de acesso ao flat?<time>08:02</time></div>
+              <div class="m in">Quero sim. Tem vaga de garagem?<time>08:10</time></div>
+              <div class="m out">Tem, uma vaga coberta. Enviei o acesso ao prédio e a localização da vaga. São 2 hóspedes por 4 noites, certo?<time>08:10</time></div>
+              <div class="m in">Isso. Dá pra entrar um pouco antes?<time>08:12</time></div>
+              <div class="m out">Vou confirmar com a equipe se o flat fica pronto antes das 15h e te aviso por aqui ainda de manhã.<time>08:12</time></div>
+            </div>
+
+            <div class="msgs" role="tabpanel" id="c-problema" aria-labelledby="t-problema" hidden>
+              <div class="m in">O ar-condicionado do quarto não está gelando<time>21:40</time></div>
+              <div class="m out">Sinto muito por isso. O controle está no modo Cool, em 20°? Às vezes ele volta para o modo ventilar.<time>21:40</time></div>
+              <div class="m in">Já tentei, não resolveu<time>21:44</time></div>
+              <div class="m out">Entendi. Passei o caso para a equipe com o seu flat e o que você já testou, para ninguém te perguntar tudo de novo.<time>21:44</time></div>
+              <div class="m sys">Conversa transferida para uma pessoa da equipe</div>
+            </div>
+
+            <div class="msgs" role="tabpanel" id="c-clinica" aria-labelledby="t-clinica" hidden>
+              <div class="m in">Oi, vi o vídeo de vocês no Instagram. Como funciona a avaliação?<time>19:27</time></div>
+              <div class="m out">Oi! A avaliação dura cerca de 30 minutos e é feita com a especialista. Tenho horários na quinta às 10h ou na sexta às 16h. Qual fica melhor?<time>19:27</time></div>
+              <div class="m in">Sexta às 16h. Quanto custa o tratamento?<time>19:30</time></div>
+              <div class="m out">Agendado para sexta às 16h. O valor depende do que a especialista indicar, então ela passa na avaliação. Te mando um lembrete na véspera.<time>19:30</time></div>
+            </div>
+          </div>
+          <p class="nota">Conversas ilustrativas. Nomes, horários e detalhes são exemplos de como o agente funciona.</p>
+        </div>
+
+        <ul class="faz">
+          <li><h3>Conhece o seu negócio</h3><p>Trabalha com os dados que você mantém atualizados: unidades, agenda, regras, quem está hospedado e por quanto tempo.</p></li>
+          <li><h3>Começa a conversa</h3><p>Manda o bom dia do check-in, o lembrete da consulta e o recado do fim da estadia, sem ninguém precisar lembrar.</p></li>
+          <li><h3>Resolve o que dá</h3><p>Tira dúvidas e orienta na hora, inclusive de noite e no fim de semana.</p></li>
+          <li><h3>Sabe a hora de chamar alguém</h3><p>Quando o caso pede uma pessoa, transfere com o histórico e o contexto já organizados.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="wrap">
+      <p class="label">Contato</p>
+      <h2 style="margin-top:18px">Vamos falar da <em>sua marca.</em></h2>
+      <p>Conte o que você vende e onde quer chegar. A gente responde com o que faria no seu perfil.</p>
+      <div class="actions">
+        <a class="btn solid" id="btn-wa" href="#" target="_blank" rel="noopener" hidden>Chamar no WhatsApp</a>
+        <a class="btn ghost" id="btn-ig" href="https://www.instagram.com/dett.midia/" target="_blank" rel="noopener">Chamar no Instagram</a>
+      </div>
+      <div class="canais">
+        <span id="txt-wa" hidden>WhatsApp <b id="num-wa"></b></span>
+        <span>Instagram <b>@dett.midia</b></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Det Media · Diaz &amp; Thiago</span>
+    <span>Engajamento orgânico com assinatura de luxo.</span>
+  </div>
+</footer>
+
+<script>
+/* ===== CONFIGURAÇÃO DE CONTATO =====
+   Coloque o WhatsApp com DDI e DDD, só números. Exemplo: "5511999998888".
+   Enquanto estiver vazio, o site mostra só o Instagram. */
+const WHATSAPP = "";
+const MENSAGEM = "Olá! Vi o site da Det Media e quero conversar sobre a minha marca.";
+
+(function(){
+  if(/^\d{12,13}$/.test(WHATSAPP)){
+    const wa=document.getElementById('btn-wa');
+    wa.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(MENSAGEM);
+    wa.hidden=false;
+    const d=WHATSAPP.slice(2);
+    document.getElementById('num-wa').textContent='('+d.slice(0,2)+') '+d.slice(2,-4)+'-'+d.slice(-4);
+    document.getElementById('txt-wa').hidden=false;
+    document.getElementById('btn-ig').className='btn ghost';
+  }else{
+    document.getElementById('btn-ig').className='btn solid';
+  }
+  const tabs=[...document.querySelectorAll('.tab')];
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(o=>{
+      const on=o===t;
+      o.setAttribute('aria-selected',on);
+      document.getElementById(o.getAttribute('aria-controls')).hidden=!on;
+    });
+  }));
+})();
+</script>
+</body>
+</html>
