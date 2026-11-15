@@ -84,14 +84,15 @@ section{border-top:1px solid var(--line);padding:clamp(56px,8vw,104px) 0}
 .servicos p{color:var(--marfim-dim);max-width:60ch}
 @media (max-width:760px){.servicos li{grid-template-columns:1fr}}
 
-/* Trabalho */
-.case{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:32px clamp(32px,6vw,88px);align-items:center}
-.case video{width:100%;aspect-ratio:9/16;display:block;background:var(--noir-2);border:1px solid var(--line);border-radius:4px;object-fit:cover}
-.case h3{font-size:clamp(34px,4.6vw,56px);margin:14px 0 18px}
-.case p{color:var(--marfim-dim);max-width:52ch}
-.feito{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;list-style:none;padding:0}
-.feito li{border:1px solid var(--champagne);color:var(--champagne);padding:7px 16px;font-size:13px;font-weight:600;letter-spacing:.06em;border-radius:999px}
-@media (max-width:760px){.case{grid-template-columns:1fr}.case video{max-width:340px}}
+/* Trabalhos */
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:48px clamp(24px,4vw,48px);align-items:start}
+.obra{max-width:340px}
+.obra video{width:100%;aspect-ratio:9/16;display:block;background:var(--noir-2);border:1px solid var(--line);border-radius:4px;object-fit:cover;margin-bottom:20px}
+.obra h3{font-size:clamp(28px,3vw,36px);margin:10px 0 12px}
+.obra p{color:var(--marfim-dim)}
+.obra p.label{color:var(--champagne)}
+.feito{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px;list-style:none;padding:0}
+.feito li{border:1px solid var(--champagne);color:var(--champagne);padding:6px 14px;font-size:12px;font-weight:600;letter-spacing:.06em;border-radius:999px}
 
 /* Agente de IA */
 .agente{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:40px clamp(32px,6vw,88px);align-items:start}
@@ -183,11 +184,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="label">Trabalhos</p>
         <h2>Feito pela Det</h2>
       </div>
-      <div class="case">
-        <video controls playsinline preload="metadata" poster="global-stay.jpg" aria-label="Vídeo: tour de apartamento da Global Stay">
-          <source src="global-stay.mp4" type="video/mp4">
-        </video>
-        <div>
+      <div class="galeria">
+        <article class="obra">
+          <video controls playsinline preload="metadata" poster="global-stay.jpg" aria-label="Vídeo: tour de apartamento da Global Stay">
+            <source src="global-stay.mp4" type="video/mp4">
+          </video>
           <p class="label">Hospedagem por temporada</p>
           <h3>Global Stay</h3>
           <p>Tour de apartamento em vídeo vertical, com apresentador e legenda, para mostrar a experiência da hospedagem em 30 segundos.</p>
@@ -196,7 +197,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <li>Captação</li>
             <li>Edição</li>
           </ul>
-        </div>
+        </article>
+        <article class="obra">
+          <video controls playsinline preload="metadata" poster="drift-interlagos.jpg" aria-label="Vídeo: evento de drift em Interlagos">
+            <source src="drift-interlagos.mp4" type="video/mp4">
+          </video>
+          <p class="label">Evento automotivo</p>
+          <h3>Drift em Interlagos</h3>
+          <p>Vídeo vertical de um evento de drift em Interlagos, da pista aos boxes, com o público junto da grade.</p>
+        </article>
       </div>
     </div>
   </section>
